@@ -1,2 +1,2 @@
-# Intro_to_Algo
-3rd Ed.
+# Introduction to Algorithms. 3rd Ed.
+1\.ch6 -- heap

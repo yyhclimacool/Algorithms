@@ -21,6 +21,7 @@ public:
     bool heap_extract_max(int &);
     void heap_increase_key(std::vector<int>::size_type, int);
     void heap_insert(int);
+    void heap_delete(std::vector<int>::size_type );
 private:
     std::vector<int> _vec;
     std::vector<int>::size_type _heap_size;

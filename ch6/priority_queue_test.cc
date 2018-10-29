@@ -13,5 +13,7 @@ int main() {
     std::cout << "Insert 21 into max heap --- " << maxheap << std::endl;
     maxheap.heap_increase_key(7, 37);
     std::cout << "Increase key 7 - 37     --- " << maxheap << std::endl;
+    maxheap.heap_delete(2);
+    std::cout << "Delete key 2            --- " << maxheap << std::endl;
     return 0;
 }

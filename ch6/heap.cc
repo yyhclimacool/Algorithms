@@ -71,9 +71,19 @@ void MaxHeap::heap_insert(int key) {
     heap_increase_key(_heap_size-1, key);
 }
 
+void MaxHeap::heap_delete(std::vector<int>::size_type i) {
+    if (i >= _heap_size) {
+        std::cerr << "Index overflow!" << std::endl;
+        return;
+    }
+    std::swap(_vec[i], _vec[_heap_size-1]);
+    --_heap_size;
+    max_heapify(i);
+}
+
 std::ostream &operator<<(std::ostream &os, const MaxHeap &_heap) {
-    for (const auto & i : _heap._vec)
-        os << i << " ";
+    for (size_t i = 0; i < _heap._heap_size; ++i)
+        os << _heap._vec[i] << " ";
 
     return os;
 }

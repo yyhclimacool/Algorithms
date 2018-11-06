@@ -13,7 +13,7 @@ void counting_sort_on_digit_i(std::vector<int> &a, std::vector<int> &b, int k, i
     b.resize(a.size());
     std::vector<int> c(k, 0);
     for (int j = 0; j < a.size(); ++j)
-        c[(a[j] / div_num) % 10] = c[(a[j] / div_num) % 10] + 1;
+        ++c[(a[j] / div_num) % 10];
     for (int j = 1; j < k; ++j)
         c[j] = c[j] + c[j-1];
     for (int j = a.size() - 1; j >= 0; --j){
